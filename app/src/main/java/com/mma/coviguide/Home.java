@@ -31,7 +31,27 @@ public class Home extends AppCompatActivity {
                     if (finalI == 0){
                         Intent intent = new Intent(Home.this,AboutVirus.class);
                         startActivity(intent);
-                        Toast.makeText(Home.this,"Welcom",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Home.this,"About Virus",Toast.LENGTH_SHORT).show();
+                    }
+                    else if (finalI == 1){
+                        Intent intent = new Intent(Home.this,Symptoms.class);
+                        startActivity(intent);
+                        Toast.makeText(Home.this,"Symptoms",Toast.LENGTH_SHORT).show();
+                    }
+                    else if (finalI == 2){
+                        Intent intent = new Intent(Home.this,HowToProtect.class);
+                        startActivity(intent);
+                        Toast.makeText(Home.this,"How To Protect",Toast.LENGTH_SHORT).show();
+                    }
+                    else if (finalI == 3){
+                        Intent intent = new Intent(Home.this,HomeIsolation.class);
+                        startActivity(intent);
+                        Toast.makeText(Home.this,"HomeIsolation",Toast.LENGTH_SHORT).show();
+                    }
+                    else if (finalI == 4){
+                        Intent intent = new Intent(Home.this,ThingsToDo.class);
+                        startActivity(intent);
+                        Toast.makeText(Home.this,"Things To Do",Toast.LENGTH_SHORT).show();
                     }
 
                 }
