@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "131854479948",
+    "project_id": "coviguide",
+    "storage_bucket": "coviguide.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131854479948:android:fa297a4c7e5e0caa06bae9",
+        "android_client_info": {
+          "package_name": "com.mma.coviguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131854479948-3s6jb9jrqvon3n5rjrts42p54lo5e4ab.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATXxJa7VUmFfSGeQfhUHeYjKJ1fNITvTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131854479948-3s6jb9jrqvon3n5rjrts42p54lo5e4ab.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

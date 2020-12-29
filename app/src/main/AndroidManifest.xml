@@ -12,12 +12,12 @@
         <activity android:name=".Login"/>
         <activity android:name=".SignUp" />
         <activity android:name=".ThingsToDo"/>
-        <activity android:name=".HomeIsolation" />
-        <activity android:name=".Symptoms" />
-        <activity android:name=".AboutApp" />
-        <activity android:name=".AboutVirus" />
+        <activity android:name=".HomeIsolation"/>
+        <activity android:name=".Symptoms"/>
+        <activity android:name=".AboutApp"/>
+        <activity android:name=".AboutVirus"/>
         <activity android:name=".HowToProtect" />
-        <activity android:name=".Home" />
+        <activity android:name=".Home"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
