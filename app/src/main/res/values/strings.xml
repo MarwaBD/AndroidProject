@@ -19,4 +19,19 @@
     <string name="use_trash_kan">Use trash kan</string>
     <string name="CovidDefinition">CoviGuide will help you know more about the state of the pandamic in Tunisia by visiting the site dentifiyed in the home page , Aso it will help you to be more aware about the danger of the virus ,it\'s symptoms , and it will help you find funny and healthy things to do whene you\'re quarantined</string>
     <string name="CoronaDefinition">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people infected withthe COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment. Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).</string>
+    <string name="headache">TODO</string>
+    <string name="feverimage">feverimage</string>
+    <string name="dry_cough">Dry cough</string>
+    <string name="steps">Steps</string>
+    <string name="stay_home_stay_safe">Stay Home ,Stay Safe</string>
+    <string name="rule1">Clean high touch surfaces</string>
+    <string name="rule2">Ventilate your home</string>
+    <string name="rule3">Stay at home for seven days</string>
+    <string name="meditate_image">meditate image</string>
+    <string name="meditate">Meditate</string>
+    <string name="sport_image">sport image</string>
+    <string name="practise_sport">Practise sport</string>
+    <string name="movie_image">movie image</string>
+    <string name="healthy_image">healthy image</string>
+    <string name="eat_healthy">Eat healthy</string>
 </resources>

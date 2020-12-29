@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CoviGuide">
-        <activity android:name=".AboutApp"></activity>
+        <activity android:name=".ThingsToDo"></activity>
+        <activity android:name=".HomeIsolation" />
+        <activity android:name=".Symptoms" />
+        <activity android:name=".AboutApp" />
         <activity android:name=".AboutVirus" />
         <activity android:name=".HowToProtect" />
         <activity android:name=".Home" />
