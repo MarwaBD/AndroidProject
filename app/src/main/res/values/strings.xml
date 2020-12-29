@@ -18,6 +18,15 @@
     <string name="throw_in_the_trash">throw in the trash</string>
     <string name="use_trash_kan">Use trash kan</string>
     <string name="CovidDefinition">CoviGuide will help you know more about the state of the pandamic in Tunisia by visiting the site dentifiyed in the home page , Aso it will help you to be more aware about the danger of the virus ,it\'s symptoms , and it will help you find funny and healthy things to do whene you\'re quarantined</string>
+    <string name="Email"> Email </string>
+    <string name="Password"> Password </string>
+    <string name="have_account">Already have an account? Login</string>
+    <string name="phone_number">phone number</string>
+    <string name="go_to">GO</string>
+    <string name="username"> Username </string>
+    <string name="sign_in"> Sign me in </string>
+    <string name="sign_up"> Sign up </string>
+    <string name="lost_pass"> Forget Password  </string>
     <string name="CoronaDefinition">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people infected withthe COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment. Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).</string>
     <string name="headache">TODO</string>
     <string name="feverimage">feverimage</string>
