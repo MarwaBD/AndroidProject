@@ -9,10 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CoviGuide">
-        <activity android:name=".Settings"
-            android:label="@string/Settings"
-
-            />
+        <activity android:name=".MultiLanguages"></activity>
         <activity android:name=".Login" />
         <activity android:name=".SignUp" />
         <activity
