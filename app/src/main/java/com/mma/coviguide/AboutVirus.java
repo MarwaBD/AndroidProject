@@ -2,9 +2,11 @@ package com.mma.coviguide;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 public class AboutVirus extends AppCompatActivity {
@@ -19,13 +21,15 @@ public class AboutVirus extends AppCompatActivity {
         return true;
     }
     public boolean onOptionsItemSelected(MenuItem item){
-        switch ( item.getItemId() ){
-            case R.id.menu_home:
-                Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
-            default:
-                return super.onOptionsItemSelected(item);
+        int id = item.getItemId();
+        if (id == R.id.menu_home){
+            Intent myintent = new Intent(AboutVirus.this,Home.class);
+            startActivity(myintent);
 
+            return false;
         }
+        return super.onOptionsItemSelected(item);
+
 
 
     }
