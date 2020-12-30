@@ -51,7 +51,7 @@
     <string name="sign_up">الاشتراك</string>
     <string name="email">البريد الإلكتروني</string>
     <string name="phone_number">رقم_الهاتف</string>
-    <string name="go_to">go to</string>
+    <string name="go_to">اذهب إلى</string>
     <string name="have_account">لديك حساب</string>
     <string name="title1">الأشياء الذي ينبغي فعلها</string>
     <string name="title2">قواعد عزل المنزل</string>
@@ -59,4 +59,5 @@
     <string name="title4">حول التطبيق</string>
     <string name="title5">حول فيروس كورونا</string>
     <string name="title6">كيف تحمي</string>
+    <string name="Settings">الإعدادات</string>
 </resources>
