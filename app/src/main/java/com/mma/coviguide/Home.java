@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.Toast;
+
+import java.net.URI;
 
 
 public class Home extends AppCompatActivity {
@@ -19,6 +22,11 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         mainGrid = (GridLayout) findViewById(R.id.mainGrid);
         setSingleEvent(mainGrid);
+    }
+
+    public void open(View view){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.worldometers.info/coronavirus/country/tunisia/"));
+        startActivity(browserIntent);
     }
 
     private void setSingleEvent(GridLayout mainGrid) {

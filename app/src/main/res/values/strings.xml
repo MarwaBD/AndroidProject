@@ -34,4 +34,24 @@
     <string name="movie_image">movie image</string>
     <string name="healthy_image">healthy image</string>
     <string name="eat_healthy">Eat healthy</string>
+    <string name="isolation_image">isolation_image</string>
+    <string name="action1">action1</string>
+    <string name="avoid_image">avoid_image</string>
+    <string name="do_not_welcome_visitors">do_not_welcome_visitors</string>
+    <string name="clean_image">clean_image</string>
+    <string name="clean_surfaces">clean_surfaces</string>
+    <string name="ventilation_image">ventilation_image</string>
+    <string name="ventilate_your_home">ventilate_your_home</string>
+    <string name="username">username</string>
+
+    <string name="sign_in">sign_in</string>
+    <string name="lost_pass">lost_pass</string>
+    <string name="sign_up">sign_up</string>
+    <string name="phone_number">phone_number</string>
+    <string name="go_to">go_to</string>
+    <string name="have_account">have_account</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="home_menu">Home_menu</string>
+    <string name="menu">home_menu</string>
 </resources>
