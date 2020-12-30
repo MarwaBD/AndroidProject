@@ -34,5 +34,5 @@
     <string name="movie_image">movie image</string>
     <string name="healthy_image">healthy image</string>
     <string name="eat_healthy">Eat healthy</string>
-    <string name="Home_menu">menu_Home</string>
+    <string name="menu">menu</string>
 </resources>

@@ -11,12 +11,17 @@
         android:theme="@style/Theme.CoviGuide">
         <activity android:name=".Login"/>
         <activity android:name=".SignUp" />
-        <activity android:name=".ThingsToDo"/>
-        <activity android:name=".HomeIsolation"/>
-        <activity android:name=".Symptoms"/>
+        <activity android:name=".ThingsToDo"
+                  android:parentActivityName=".Home"/>
+        <activity android:name=".HomeIsolation"
+                  android:parentActivityName=".Home"/>
+        <activity android:name=".Symptoms"
+                  android:parentActivityName=".Home"/>
         <activity android:name=".AboutApp"/>
-        <activity android:name=".AboutVirus"/>
-        <activity android:name=".HowToProtect" />
+        <activity android:name=".AboutVirus"
+                  android:parentActivityName=".Home"/>
+        <activity android:name=".HowToProtect"
+                  android:parentActivityName=".Home"/>
         <activity android:name=".Home"/>
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -25,6 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

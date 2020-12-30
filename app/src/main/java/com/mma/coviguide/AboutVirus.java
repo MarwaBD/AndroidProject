@@ -15,7 +15,10 @@ public class AboutVirus extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_virus);
+
     }
+
+
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
@@ -29,6 +32,7 @@ public class AboutVirus extends AppCompatActivity {
             return false;
         }
         return super.onOptionsItemSelected(item);
+
 
 
 
