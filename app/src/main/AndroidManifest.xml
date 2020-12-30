@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CoviGuide">
+<<<<<<< HEAD
         <activity android:name=".Start_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+=======
+        <activity android:name=".MultiLanguages"></activity>
+>>>>>>> f3c5cc5ce384f21c9d2ccacc1460ff7ce5d31889
         <activity android:name=".Login" />
         <activity android:name=".SignUp" />
         <activity
