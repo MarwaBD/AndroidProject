@@ -16,15 +16,16 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp"
         android:src="@drawable/logo" />
+
     <TextView
         android:id="@+id/startText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/startImage"
-        android:text="@string/AppName"
-        android:gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:textSize="20pt" />
+        android:gravity="center_horizontal"
+        android:text="@string/AppName"
+        android:textSize="10pt" />
 
     <Button
         android:id="@+id/btn1"
