@@ -9,12 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CoviGuide">
-        <activity android:name=".MultiLanguages"></activity>
+
         <activity android:name=".Login" />
         <activity android:name=".SignUp" />
         <activity
             android:name=".ThingsToDo"
             android:label="@string/title1"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".Settings"
+            android:label="@string/Settings"
             android:parentActivityName=".Home" />
         <activity
             android:name=".HomeIsolation"
