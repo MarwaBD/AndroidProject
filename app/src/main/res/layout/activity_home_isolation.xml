@@ -25,12 +25,12 @@
             android:layout_margin="12dp"
             android:background="#fff"
             >
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:layout_height="279dp"
                 android:gravity="center"
-                >
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="164dp"
@@ -42,38 +42,38 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/action1"
-                    android:textSize="25sp"
                     android:textAlignment="center"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:cardElevation="2dp"
-            app:cardCornerRadius="8dp"
             android:layout_margin="12dp"
+            android:layout_weight="1"
             android:background="#fff"
-            >
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:gravity="center"
-                >
+                android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="247dp"
-                    android:layout_height="173sp"
+                    android:layout_width="179dp"
+                    android:layout_height="169dp"
                     android:contentDescription="@string/avoid_image"
                     android:src="@drawable/avoid" />
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/do_not_welcome_visitors"
                     android:textAlignment="center"
                     android:textColor="@color/black"

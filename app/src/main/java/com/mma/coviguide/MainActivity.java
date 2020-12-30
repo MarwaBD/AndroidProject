@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,SignUp.class);
+                Intent intent = new Intent(MainActivity.this,Home.class);
                 startActivity(intent);
                 Toast.makeText(MainActivity.this,"Welcom",Toast.LENGTH_SHORT).show();
             }

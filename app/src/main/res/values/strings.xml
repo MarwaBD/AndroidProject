@@ -35,4 +35,27 @@
     <string name="healthy_image">healthy image</string>
     <string name="eat_healthy">Eat healthy</string>
     <string name="menu">menu</string>
+    <string name="isolation_image">isolation image</string>
+    <string name="action1">action1</string>
+    <string name="avoid_image">avoid_image</string>
+    <string name="do_not_welcome_visitors">do not welcome visitors</string>
+    <string name="clean_image">clean_image</string>
+    <string name="clean_surfaces">clean surfaces</string>
+    <string name="ventilation_image">ventilation_image</string>
+    <string name="ventilate_your_home">ventilate your home</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="sign_in">sign_in</string>
+    <string name="lost_pass">lost pass</string>
+    <string name="sign_up">sign up</string>
+    <string name="email">email</string>
+    <string name="phone_number">phone_number</string>
+    <string name="go_to">go to</string>
+    <string name="have_account">have account</string>
+    <string name="title1">Things to do </string>
+    <string name="title2">Home isolation rules</string>
+    <string name="title3">Corona virus symptoms</string>
+    <string name="title4">About application</string>
+    <string name="title5">About corona virus</string>
+    <string name="title6">How to protect </string>
 </resources>
