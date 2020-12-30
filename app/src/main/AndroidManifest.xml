@@ -9,29 +9,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CoviGuide">
-        <activity android:name=".Login"/>
+        <activity android:name=".MultiLanguages"></activity>
+        <activity android:name=".Login" />
         <activity android:name=".SignUp" />
-        <activity android:name=".ThingsToDo"
+        <activity
+            android:name=".ThingsToDo"
             android:label="@string/title1"
-            android:parentActivityName=".Home"/>
-        <activity android:name=".HomeIsolation"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".HomeIsolation"
             android:label="@string/title2"
-            android:parentActivityName=".Home"/>
-        <activity android:name=".Symptoms"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".Symptoms"
             android:label="@string/title3"
-            android:parentActivityName=".Home"/>
-        <activity android:name=".AboutApp"
-            android:label="@string/title4"
-            />
-        <activity android:name=".AboutVirus"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".AboutApp"
+            android:label="@string/title4" />
+        <activity
+            android:name=".AboutVirus"
             android:label="@string/title5"
-            android:parentActivityName=".Home"/>
-        <activity android:name=".HowToProtect"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".HowToProtect"
             android:label="@string/title6"
-            android:parentActivityName=".Home"/>
-        <activity android:name=".Home"
-            android:label="@string/AppName"
-            />
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".Home"
+            android:label="@string/AppName" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +45,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
