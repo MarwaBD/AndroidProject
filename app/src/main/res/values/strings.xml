@@ -34,13 +34,4 @@
     <string name="movie_image">movie image</string>
     <string name="healthy_image">healthy image</string>
     <string name="eat_healthy">Eat healthy</string>
-    <string name="isolation_image">isolation image</string>
-    <string name="action1">Stay at home 14 days</string>
-    <string name="avoid_image">avoid image</string>
-    <string name="do_not_welcome_visitors">Do not welcome visitors</string>
-    <string name="clean_image">clean image</string>
-    <string name="clean_surfaces">Clean surfaces</string>
-    <string name="ventilation_image">ventilation image</string>
-    <string name="ventilate_your_home">Ventilate your home</string>
-    <string name="home_menu">Home_menu</string>
 </resources>
