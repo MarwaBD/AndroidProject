@@ -59,4 +59,7 @@
     <string name="title5">About corona virus</string>
     <string name="title6">How to protect </string>
     <string name="Settings">Settings</string>
+    <string name="home_isolation">Home isolation</string>
+    <string name="about">About</string>
+    <string name="change_language">Change Language</string>
 </resources>

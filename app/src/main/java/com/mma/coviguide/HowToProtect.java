@@ -1,5 +1,6 @@
 package com.mma.coviguide;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -13,6 +14,8 @@ public class HowToProtect extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_how_to_protect);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(getResources().getString(R.string.title6));
     }
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main_menu, menu);
@@ -22,6 +25,12 @@ public class HowToProtect extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.menu_home){
             Intent myintent = new Intent(HowToProtect.this,Settings.class);
+            startActivity(myintent);
+
+            return false;
+        }
+        else if (id == R.id.aboutApp){
+            Intent myintent = new Intent(HowToProtect.this,AboutApp.class);
             startActivity(myintent);
 
             return false;

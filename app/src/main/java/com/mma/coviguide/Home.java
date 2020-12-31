@@ -1,11 +1,14 @@
 package com.mma.coviguide;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.Toast;
@@ -20,8 +23,35 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(getResources().getString(R.string.app_name));
         mainGrid = (GridLayout) findViewById(R.id.mainGrid);
         setSingleEvent(mainGrid);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+        if (id == R.id.menu_home){
+            Intent myintent = new Intent(Home.this,Settings.class);
+            startActivity(myintent);
+
+            return false;
+        }
+        else if (id == R.id.aboutApp){
+            Intent myintent = new Intent(Home.this,AboutApp.class);
+            startActivity(myintent);
+
+            return false;
+        }
+        return super.onOptionsItemSelected(item);
+
+
+
+
     }
 
     public void open(View view){

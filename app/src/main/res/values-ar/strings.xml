@@ -58,6 +58,9 @@
     <string name="title3">أعراض فيروس كورونا</string>
     <string name="title4">حول التطبيق</string>
     <string name="title5">حول فيروس كورونا</string>
-    <string name="title6">كيف تحمي</string>
+    <string name="title6">كيف تحمي نفسك</string>
     <string name="Settings">الإعدادات</string>
+    <string name="home_isolation">العزل المنزلي</string>
+    <string name="about">حول</string>
+    <string name="change_language">تغيير اللغة</string>
 </resources>

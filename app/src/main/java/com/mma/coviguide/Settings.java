@@ -24,7 +24,7 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         loadLocal();
         setContentView(R.layout.activity_settings);
-        //change actionbar title, if you dont change it will be according to your system default language/english
+        //change actionbar title, unless it will be according to your system default language/english
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.app_name));
 
@@ -40,7 +40,7 @@ public class Settings extends AppCompatActivity {
 
     private void showChangeLanguageDialog() {
         //array of languages
-        final String[] listItems = {"Francais","العربية"};
+        final String[] listItems = {"Francais","العربية","English"};
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(Settings.this);
         mBuilder.setTitle("Choose language...");
         mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {

@@ -25,12 +25,12 @@
                 android:text="@string/hometext"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="30sp"
+                android:textSize="27sp"
                 android:textStyle="italic" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:layout_below="@+id/textGrid"
                 android:layout_centerHorizontal="true"
                 android:onClick="open"
@@ -202,7 +202,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:text="Home isolation"
+                        android:text="@string/home_isolation"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
