@@ -21,7 +21,7 @@ public class ThingsToDo extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         if (id == R.id.menu_home){
-            Intent myintent = new Intent(ThingsToDo.this,Home.class);
+            Intent myintent = new Intent(ThingsToDo.this,Settings.class);
             startActivity(myintent);
 
             return false;

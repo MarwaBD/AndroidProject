@@ -21,7 +21,7 @@ public class HowToProtect extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         if (id == R.id.menu_home){
-            Intent myintent = new Intent(HowToProtect.this,Home.class);
+            Intent myintent = new Intent(HowToProtect.this,Settings.class);
             startActivity(myintent);
 
             return false;

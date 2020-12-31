@@ -21,7 +21,7 @@ public class HomeIsolation extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         if (id == R.id.menu_home){
-            Intent myintent = new Intent(HomeIsolation.this,Home.class);
+            Intent myintent = new Intent(HomeIsolation.this,Settings.class);
             startActivity(myintent);
 
             return false;
