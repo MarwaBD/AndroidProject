@@ -17,7 +17,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:gravity="center"
@@ -25,20 +25,23 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="300dp"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/covid19"
-                android:visibility="visible">
-
-            </ImageView>
+                android:src="@drawable/as"
+                android:visibility="visible"></ImageView>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
 
-            </com.google.android.material.textfield.TextInputEditText>
+                android:drawableStart="@drawable/ic_action_username" />
 
-
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/as" />
 
         </LinearLayout>
 
@@ -50,14 +53,15 @@
             android:layout_margin="20dp"
             android:hint="@string/username">
 
-        </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_action_username"
+                android:inputType="textAutoComplete" />
 
-                android:inputType="textAutoComplete" >
-            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -70,6 +74,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_action_password"
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -80,23 +85,23 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_margin="20dp"
-            android:background="#fff"
+            android:background="#94E197"
             android:text="@string/sign_in" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:background="#000"
+            android:background="#EDDB8E"
             android:text="@string/lost_pass"
-            android:textColor="#fff" />
+            android:textColor="#0C0C0C" />
 
         <Button
             android:id="@+id/signup_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:background="@color/REd"
+            android:background="#FDC6C9"
             android:text="@string/sign_up"
             android:textColor="#000" />
 

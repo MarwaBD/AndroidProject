@@ -11,20 +11,7 @@
         android:background="#fff"
         android:orientation="vertical"
         android:padding="20dp">
-        <LinearLayout
-            android:layout_margin="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            >
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:contentDescription="@string/app_name"
-                android:src="@drawable/covid19" />
-
-        </LinearLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/reg_username"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -35,7 +22,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_action_username" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -64,6 +52,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_action_password"
 
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -84,24 +73,22 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:layout_margin="20dp"
             android:id="@+id/go_btn"
-            android:layout_width="match_parent"
+            android:layout_width="326dp"
             android:layout_height="wrap_content"
-            android:background="@color/REd"
+            android:layout_margin="20dp"
+            android:background="#88BAE682"
             android:text="@string/go_to"
-            android:textColor="#fff">
-        </Button>
+            android:textColor="#100F0F" />
 
         <Button
             android:id="@+id/alredy_have_btn"
-            android:layout_width="match_parent"
+            android:layout_width="333dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:background="@color/REd"
+            android:background="#F46E45"
             android:text="@string/have_account"
-            android:textColor="#fff" />
-
+            android:textColor="#0E0E0E" />
 
 
     </LinearLayout>
