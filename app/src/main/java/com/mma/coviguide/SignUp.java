@@ -1,132 +1,127 @@
 package com.mma.coviguide;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.database.DatabaseReference;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class SignUp extends AppCompatActivity {
-    TextInputLayout a, b, c, d;
+import org.w3c.dom.Text;
 
-    Button button, button2;
-    FirebaseDatabase root;
-    DatabaseReference reference;
+public class SignUp extends AppCompatActivity implements View.OnClickListener{
+    private FirebaseAuth mAuth;
+    private TextView banner,registerUser;
+    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        mAuth = FirebaseAuth.getInstance();
 
+        banner = (TextView) findViewById(R.id.banner);
+        banner.setOnClickListener(this);
 
-        button = findViewById(R.id.alredy_have_btn);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(SignUp.this, Login.class);
-                startActivity(i);
-            }
-        });
+        registerUser = (Button) findViewById(R.id.registerUser);
+        registerUser.setOnClickListener(this);
 
-        a = findViewById(R.id.reg_username);
-        b = findViewById(R.id.reg_email);
-        c = findViewById(R.id.reg_password);
-        d = findViewById(R.id.reg_phone_number);
-
-        button2 = findViewById(R.id.go_btn);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                root = FirebaseDatabase.getInstance();
-                reference = root.getReference("Users");
-                if (!validateName() | !validateEmail() | !validatepassword() | !validatephone()) {
-                    return;
-                }
-                //get all the values
-                String name = a.getEditText().getText().toString();
-                String email = b.getEditText().getText().toString();
-                String password = c.getEditText().getText().toString();
-                String phoneNo = d.getEditText().getText().toString();
-                UserHelperClass helper = new UserHelperClass(name, email, phoneNo, password);
-                reference.child(phoneNo).setValue(helper);
-            }
-        });
+        editTextFullName = (EditText) findViewById(R.id.fullName);
+        editTextAge = (EditText) findViewById(R.id.age);
+        editTextEmail = (EditText) findViewById(R.id.Email);
+        editTextPassword = (EditText) findViewById(R.id.Password);
 
     }
 
-    private Boolean validateName() {
-        String name = a.getEditText().getText().toString();
-        if (name.isEmpty()) {
-            a.setError("Field cannot be empty");
-            return false;
-        } else if (name.length() >= 15) {
-            a.setError("Username too Long");
-            return false;
-        } else {
-            a.setError(null);
-            a.setErrorEnabled(false);
-            return true;
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.banner :
+                startActivity(new Intent(this,Login.class));
+                break;
+
+            case R.id.registerUser:
+                registerUser();
+                break;
+
         }
+
     }
 
-    private Boolean validateEmail() {
-        String email = b.getEditText().getText().toString();
-        String em = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-        if (email.isEmpty()) {
-            b.setError("Field cannot be empty");
-            return false;
-        } else if (!email.matches(em)) {
-            b.setError("Invalid email address");
-            return false;
-        } else {
-            b.setError(null);
-            b.setErrorEnabled(false);
-            return true;
+    private void registerUser() {
+        String email = editTextEmail.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
+        String fullName = editTextFullName.getText().toString().trim();
+        String age = editTextAge.getText().toString().trim();
+
+        if (fullName.isEmpty()){
+            editTextFullName.setError("full name is required");
+            editTextFullName.requestFocus();
+            return;
         }
-    }
-
-    private Boolean validatephone() {
-        String phoneNo = d.getEditText().getText().toString();
-        if (phoneNo.isEmpty()) {
-            d.setError("Field cannot be empty");
-            return false;
-        } else if (phoneNo.length() != 8) {
-            a.setError("invalid phone number ");
-            return false;
-        } else {
-            d.setError(null);
-            d.setErrorEnabled(false);
-            return true;
+        if (age.isEmpty()){
+            editTextAge.setError("age is required");
+            editTextAge.requestFocus();
+            return;
         }
-    }
-
-    private Boolean validatepassword() {
-        String password = c.getEditText().getText().toString();
-        String pw = "^" +
-                //  "(?=.*[0-9])"+
-                //   "(?=.*[a-z])"+
-                "(?=.*[A-Z])" +
-                "(?=.*[@#$%^&+=])" +
-                "(?=\\S+$)" +
-                ".{4,}" +
-                "$";
-        if (password.isEmpty()) {
-            c.setError("Field cannot be empty");
-            return false;
-        } else if (!password.matches(pw)) {
-            c.setError("Invalid password");
-            return false;
-        } else {
-            c.setError(null);
-            c.setErrorEnabled(false);
-            return true;
+        if (email.isEmpty()){
+            editTextEmail.setError("email is required");
+            editTextEmail.requestFocus();
+            return;
         }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            editTextEmail.setError("Please enter a valid email");
+            editTextEmail.requestFocus();
+            return;
+        }
+        if (password.isEmpty()){
+            editTextPassword.setError("password is required");
+            editTextPassword.requestFocus();
+            return;
+        }
+        if (password.length() < 6){
+            editTextPassword.setError("min password length should be 6");
+            editTextPassword.requestFocus();
+            return;
+        }
+
+        mAuth.createUserWithEmailAndPassword(email,password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            User user = new User(fullName,age,email);
+                            FirebaseDatabase.getInstance().getReference("users")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()){
+                                        Toast.makeText(SignUp.this,"User has been registered successfully",Toast.LENGTH_LONG).show();
+                                    }
+                                    else {
+                                        Toast.makeText(SignUp.this,"failed to register try again1",Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+
+                        }else {
+                            Toast.makeText(SignUp.this,"failed to register try again2",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
     }
-
-
 }

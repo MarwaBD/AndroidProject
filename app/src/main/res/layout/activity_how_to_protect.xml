@@ -40,8 +40,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Use Mask"
-                        android:textSize="25dp"
+                        android:text="@string/use_mask"
+                        android:textSize="25sp"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
 

@@ -63,4 +63,14 @@
     <string name="home_isolation">isolement à domicile</string>
     <string name="about">à propos</string>
     <string name="change_language">changer de langue</string>
+    <string name="full_name">nom complet</string>
+    <string name="age">Age</string>
+    <string name="email_adresse">Adresse email</string>
+    <string name="pwd">Mot de passe</string>
+    <string name="sign_up1">s\'inscrire</string>
+    <string name="register_text">already registered? Go login</string>
+    <string name="sign_in1">se connecter</string>
+    <string name="register">s\'inscrir</string>
+    <string name="forget_password">Oublier mot de passe </string>
+    <string name="remember_me">enregistrer mes données</string>
 </resources>

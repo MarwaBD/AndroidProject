@@ -1,109 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#00CCFFFF"
+        android:background="#fff"
         android:orientation="vertical"
-        android:padding="20dp"
-        tools:context="com.example.coshield19.Login">
+        android:padding="20dp">
 
+        <ImageView
+            android:id="@+id/LoginImage"
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:src="@drawable/login"
+            />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_gravity="center"
-            android:layout_margin="20dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:contentDescription="@string/app_name"
-                android:src="@drawable/as"
-                android:visibility="visible"></ImageView>
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:drawableStart="@drawable/ic_action_username" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="112dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/as" />
-
-        </LinearLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/login_username"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+         <EditText
+            android:id="@+id/Email"
+             android:layout_below="@+id/LoginImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:hint="@string/username">
+            android:hint="@string/email_adresse"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:layout_marginTop="15sp"/>
 
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_action_username"
-                android:inputType="textAutoComplete" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <EditText
+            android:id="@+id/Password"
+            android:layout_below="@+id/Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:hint="@string/password"
-            app:passwordToggleEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_action_password"
-                android:inputType="textPassword" />
-
-        </com.google.android.material.textfield.TextInputLayout>
+            android:hint="@string/pwd"
+            android:drawableStart="@drawable/ic_baseline_no_encryption_24"
+            android:inputType="textPassword"
+            android:layout_marginTop="15sp"/>
 
         <Button
-            android:id="@+id/signin_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_margin="20dp"
-            android:background="#94E197"
-            android:text="@string/sign_in" />
-
-        <Button
+            android:id="@+id/login"
+            android:layout_below="@id/Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:background="#EDDB8E"
-            android:text="@string/lost_pass"
-            android:textColor="#0C0C0C" />
-
-        <Button
-            android:id="@+id/signup_button"
-            android:layout_width="match_parent"
+            android:background="#88BAE682"
+            android:text="@string/sign_in1"
+            android:layout_marginTop="15sp"
+            />
+        <CheckBox
+            android:id="@+id/Check"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="#FDC6C9"
-            android:text="@string/sign_up"
-            android:textColor="#000" />
+            android:layout_below="@id/login"
+            android:text="@string/remember_me"
+            android:layout_margin="20dp"/>
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/ForgetPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Check"
+            android:text="@string/forget_password"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            />
+
+        <TextView
+            android:id="@+id/registerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ForgetPwd"
+            android:text="@string/register"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_margin="20dp"/>
+
+
+    </RelativeLayout>
 </ScrollView>

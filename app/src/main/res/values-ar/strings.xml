@@ -63,4 +63,14 @@
     <string name="home_isolation">العزل المنزلي</string>
     <string name="about">حول</string>
     <string name="change_language">تغيير اللغة</string>
+    <string name="full_name">الاسم بالكامل</string>
+    <string name="age">العمر</string>
+    <string name="email_adresse">البريد الإلكتروني</string>
+    <string name="pwd">كلمه السر</string>
+    <string name="sign_up1">تسجيل</string>
+    <string name="register_text">لديك حساب؟ اذهب لتسجيل الدخول</string>
+    <string name="sign_in1">تسجيل الدخول</string>
+    <string name="register">تسجيل</string>
+    <string name="forget_password">نسيت كلمة المرور</string>
+    <string name="remember_me">حفظ البيانات</string>
 </resources>
