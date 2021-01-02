@@ -25,7 +25,7 @@ public class AboutApp extends AppCompatActivity {
     //item selection
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
-        if (id == R.id.menu_home){
+        if (id == R.id.settings){
             Intent myintent = new Intent(AboutApp.this,Settings.class);
             startActivity(myintent);
 

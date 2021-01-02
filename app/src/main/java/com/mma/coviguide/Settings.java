@@ -29,7 +29,7 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         //change actionbar title, unless it will be according to your system default language/english
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle(getResources().getString(R.string.app_name));
+        actionBar.setTitle(getResources().getString(R.string.Settings));
 
         Button changeLang = findViewById(R.id.ChangeMyLang);
         changeLang.setOnClickListener(new View.OnClickListener() {
@@ -112,8 +112,14 @@ public class Settings extends AppCompatActivity {
     }
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
-        if (id == R.id.menu_home){
-            Intent myintent = new Intent(Settings.this,Home.class);
+        if (id == R.id.settings){
+            Intent myintent = new Intent(Settings.this,Settings.class);
+            startActivity(myintent);
+
+            return false;
+        }
+        else if (id == R.id.aboutApp){
+            Intent myintent = new Intent(Settings.this,AboutApp.class);
             startActivity(myintent);
 
             return false;

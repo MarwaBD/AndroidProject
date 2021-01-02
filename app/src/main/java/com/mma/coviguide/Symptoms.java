@@ -25,7 +25,7 @@ public class Symptoms extends AppCompatActivity {
     // item selction
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
-        if (id == R.id.menu_home){
+        if (id == R.id.settings){
             Intent myintent = new Intent(Symptoms.this,Settings.class);
             startActivity(myintent);
 

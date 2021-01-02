@@ -76,4 +76,5 @@
     <string name="use_mask">Utiliser un masque</string>
     <string name="LOGOUT">Déconnecter</string>
     <string name="reset_password">réinitialiser le mot de passe</string>
+    <string name="home">Principale</string>
 </resources>
