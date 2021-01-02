@@ -28,11 +28,13 @@ public class Home extends AppCompatActivity {
         mainGrid = (GridLayout) findViewById(R.id.mainGrid);
         setSingleEvent(mainGrid);
     }
+    //menu de navigation
 
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
+    //item selection
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         if (id == R.id.menu_home){
@@ -41,6 +43,7 @@ public class Home extends AppCompatActivity {
 
             return false;
         }
+
         else if (id == R.id.aboutApp){
             Intent myintent = new Intent(Home.this,AboutApp.class);
             startActivity(myintent);
@@ -53,11 +56,14 @@ public class Home extends AppCompatActivity {
 
 
     }
+    //intent to a browser
 
     public void open(View view){
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.worldometers.info/coronavirus/country/tunisia/"));
         startActivity(browserIntent);
     }
+
+    //intents to other activities
 
     private void setSingleEvent(GridLayout mainGrid) {
         for (int i=0;i<mainGrid.getChildCount();i++){

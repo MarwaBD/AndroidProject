@@ -20,12 +20,13 @@ public class AboutVirus extends AppCompatActivity {
         actionBar.setTitle(getResources().getString(R.string.title5));
 
     }
-
+    //menu de navigation
 
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
+    //item selection
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         if (id == R.id.menu_home){
@@ -34,6 +35,7 @@ public class AboutVirus extends AppCompatActivity {
 
             return false;
         }
+
         else if (id == R.id.aboutApp){
             Intent myintent = new Intent(AboutVirus.this,AboutApp.class);
             startActivity(myintent);

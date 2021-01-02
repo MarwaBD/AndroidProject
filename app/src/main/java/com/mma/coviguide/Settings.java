@@ -39,6 +39,8 @@ public class Settings extends AppCompatActivity {
                 showChangeLanguageDialog();
             }
         });
+
+        // log out button
         logout = (Button) findViewById(R.id.Logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

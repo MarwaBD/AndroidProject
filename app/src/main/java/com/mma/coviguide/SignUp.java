@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import org.w3c.dom.Text;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener{
+    //attributs
     private FirebaseAuth mAuth;
     private TextView banner,registerUser;
     private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword;
@@ -30,6 +31,8 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        //variables
         mAuth = FirebaseAuth.getInstance();
 
         banner = (TextView) findViewById(R.id.banner);
@@ -44,6 +47,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
         editTextPassword = (EditText) findViewById(R.id.Password);
 
     }
+    //onclick function
 
     @Override
     public void onClick(View view) {
@@ -59,6 +63,8 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
         }
 
     }
+
+    //register user function
 
     private void registerUser() {
         String email = editTextEmail.getText().toString().trim();
@@ -96,6 +102,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
             editTextPassword.requestFocus();
             return;
         }
+        //create user with email and password
 
         mAuth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {

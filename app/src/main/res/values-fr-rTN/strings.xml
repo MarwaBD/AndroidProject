@@ -75,4 +75,5 @@
     <string name="remember_me">enregistrer mes données</string>
     <string name="use_mask">Utiliser un masque</string>
     <string name="LOGOUT">Déconnecter</string>
+    <string name="reset_password">réinitialiser le mot de passe</string>
 </resources>

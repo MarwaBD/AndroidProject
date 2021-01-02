@@ -74,4 +74,5 @@
     <string name="remember_me">Remember me</string>
     <string name="use_mask">Use Mask</string>
     <string name="LOGOUT">LOGOUT</string>
+    <string name="reset_password">Reset password</string>
 </resources>

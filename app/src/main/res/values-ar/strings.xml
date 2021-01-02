@@ -75,4 +75,5 @@
     <string name="remember_me">حفظ البيانات</string>
     <string name="use_mask">استخدم القناع</string>
     <string name="LOGOUT">خروج</string>
+    <string name="reset_password">إعادة تعيين كلمة المرور</string>
 </resources>

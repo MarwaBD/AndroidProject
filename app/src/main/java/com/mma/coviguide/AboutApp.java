@@ -17,10 +17,12 @@ public class AboutApp extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.title4));
     }
+    //menu de navigation
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
+    //item selection
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         if (id == R.id.menu_home){
@@ -29,6 +31,7 @@ public class AboutApp extends AppCompatActivity {
 
             return false;
         }
+
         else if (id == R.id.aboutApp){
             Intent myintent = new Intent(AboutApp.this,AboutApp.class);
             startActivity(myintent);

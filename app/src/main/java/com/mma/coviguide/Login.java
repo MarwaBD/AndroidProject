@@ -20,7 +20,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
-    private TextView register;
+
+    //attributs
+    private TextView register , forgetPassword;
     private EditText editTextEmail , editTextPassword;
     private Button signIn;
     private CheckBox saveLoginCheckBox;
@@ -33,13 +35,20 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
+        //variables
         register = (TextView) findViewById(R.id.registerText);
         register.setOnClickListener(this);
+
+        forgetPassword = (TextView) findViewById(R.id.ForgetPwd);
+        forgetPassword.setOnClickListener(this);
 
         signIn = (Button) findViewById(R.id.login);
         signIn.setOnClickListener(this);
         editTextEmail = (EditText) findViewById(R.id.Email);
         editTextPassword = (EditText) findViewById(R.id.Password);
+
         sharedPreferences = getSharedPreferences("LoginRef",MODE_PRIVATE);
         saveLoginCheckBox = (CheckBox) findViewById(R.id.Check);
         editor = sharedPreferences.edit();
@@ -62,13 +71,20 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             case R.id.login:
                 userLogin();
                 break;
+
+            case R.id.ForgetPwd:
+                startActivity(new Intent(this,ForgetPassword.class));
+                break;
         }
 
     }
+    //userLogin function
 
     private void userLogin() {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+
+        //test sur le champ email
 
         if (email.isEmpty()){
             editTextEmail.setError("Email is required");
@@ -80,6 +96,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             editTextEmail.requestFocus();
             return;
         }
+        //test sur le champ password
         if (password.isEmpty()){
             editTextPassword.setError("password is required");
             editTextPassword.requestFocus();
@@ -90,6 +107,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             editTextPassword.requestFocus();
             return;
         }
+
+        //Sign in
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
