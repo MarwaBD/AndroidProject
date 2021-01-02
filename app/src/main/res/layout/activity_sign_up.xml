@@ -73,9 +73,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/registerUser"
             android:text="@string/register_text"
-            android:textColor="@color/black"
+            android:textColor="@color/purple_500"
             android:textSize="20sp"
-            android:layout_margin="20dp"
+            android:layout_margin="25dp"
             />
 
 

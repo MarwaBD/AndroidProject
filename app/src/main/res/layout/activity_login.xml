@@ -63,8 +63,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/Check"
             android:text="@string/forget_password"
-            android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
             android:layout_margin="20dp"
             />
 
@@ -74,9 +74,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/ForgetPwd"
             android:text="@string/register"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_margin="20dp"/>
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            android:layout_margin="20dp" />
 
 
     </RelativeLayout>
