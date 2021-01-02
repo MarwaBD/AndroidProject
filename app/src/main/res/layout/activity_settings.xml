@@ -13,7 +13,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="@string/change_language"
-
+        android:backgroundTint="@color/purple_700"
+        android:layout_centerHorizontal="true"
+        android:textSize="10pt"
+        />
+    <Button
+        android:id="@+id/Logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/REd"
+        android:layout_marginTop="50dp"
+        android:text="@string/LOGOUT"
+        android:layout_below="@+id/ChangeMyLang"
         android:layout_centerHorizontal="true"
         android:textSize="10pt"
         />

@@ -73,4 +73,6 @@
     <string name="register">تسجيل</string>
     <string name="forget_password">نسيت كلمة المرور</string>
     <string name="remember_me">حفظ البيانات</string>
+    <string name="use_mask">استخدم القناع</string>
+    <string name="LOGOUT">خروج</string>
 </resources>

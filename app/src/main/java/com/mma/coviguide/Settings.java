@@ -15,9 +15,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.Locale;
 
 public class Settings extends AppCompatActivity {
+    private Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,15 @@ public class Settings extends AppCompatActivity {
                 showChangeLanguageDialog();
             }
         });
+        logout = (Button) findViewById(R.id.Logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(Settings.this,Login.class));
+            }
+        });
+
     }
 
     private void showChangeLanguageDialog() {
